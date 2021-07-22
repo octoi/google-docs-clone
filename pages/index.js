@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import Header from '../components/Header';
 import Button from '@material-tailwind/react/Button';
 import Icon from '@material-tailwind/react/Icon';
@@ -26,6 +27,12 @@ export default function Home() {
             >
               <Icon name="more_vert" size="3xl" />
             </Button>
+          </div>
+          <div className="">
+            <div className="relative h-52 w-40 border-2 cursor-pointer hover:border-blue-700">
+              <Image src="https://links.papareact.com/pju" layout="fill" />
+            </div>
+            <p className="ml-2 mt-2 font-semibold text-sm text-gray-700">Blank</p>
           </div>
         </div>
       </section>
