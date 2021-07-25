@@ -35,6 +35,28 @@ export default function doc() {
             <p className="option">Tools</p>
           </div>
         </div>
+
+        <Button
+          color="lightBlue"
+          buttonType="filled"
+          size="regular"
+          rounded={false}
+          iconOnly={false}
+          block={false}
+          ripple="light"
+          className="hidden md:inline-flex h-10"
+        >
+          <Icon name="people" size="3xl" />
+          SHARE
+        </Button>
+
+        <img
+          loading="lazy"
+          className="cursor-pointer h-12 w-12 rounded-full ml-2"
+          onClick={signOut}
+          src={session?.user?.image}
+          alt=""
+        />
       </header>
     </div>
   )
