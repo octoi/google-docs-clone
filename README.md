@@ -1,29 +1,39 @@
-# Next.js + Tailwind CSS Example
+# Google Docs Clone 📝
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+A mini google docs clone powered by `Next Js` & `Firebase`.
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
+Tutorial from <a href="https://youtu.be/1ZdFJ0701QI">Sonny Sangha</a> 🎥
 
-## Preview
+## Setup 📐
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+Clone or download this repo
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+> Watch this <a href="https://youtu.be/1ZdFJ0701QI">youtube video</a> for setting up the project
 
-## Deploy your own
+Create a firebase project 🔥 
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+create a new file in `/firebase/firebaseConfig.js`  and throw it with your firebase config
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+```javascript
+const firebaseConfig = {
+    // your firebase config
+}
 
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+export default firebaseConfig;
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Enable `authentication` with `google auth provider` and enable `firestore`
+
+Copy the web sdk id & stuff
+
+> Watch the video to get more info [skip to the part]
+
+create a file named `.env.local` in project `root`
+
+```
+NEXTAUTH_URL = http://localhost:3000
+GOOGLE_CLIENT_ID = Client Id
+GOOGLE_CLIENT_SECRET = Client Secret
+```
+
+ 
