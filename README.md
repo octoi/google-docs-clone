@@ -4,8 +4,6 @@ A mini google docs clone powered by `Next Js` & `Firebase`.
 
 Tutorial from <a href="https://youtu.be/1ZdFJ0701QI">Sonny Sangha</a> 🎥
 
-> Work In Progress
-
 ## Setup 📐
 
 Clone or download this repo
