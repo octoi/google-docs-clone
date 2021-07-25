@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useSession, getSession } from 'next-auth/client';
+import { db } from '../firebase/firebase';
+import firebase from 'firebase';
 import Head from 'next/head';
 import Image from 'next/image';
 import Header from '../components/Header';
@@ -18,7 +20,16 @@ export default function Home() {
   if (!session) return <Login />
 
   const createDocument = () => {
+    if (!input.trim().length) return;
 
+    db.collection("userDoc").doc(session.user.email)
+      .collection('docs').add({
+        fileName: input,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      });
+
+    setInput("");
+    setShowModal(false);
   }
 
   const modal = (
